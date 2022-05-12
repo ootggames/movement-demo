@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | InfiniTower</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1000 height=500 style="width: 1000px; height: 500px; background: #231F20"></canvas>
+    <script src="Build/Unity Games.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Unity Games.data.br",
+        frameworkUrl: "Build/Unity Games.framework.js.br",
+        codeUrl: "Build/Unity Games.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "InfiniTower",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
